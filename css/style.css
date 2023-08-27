@@ -1,0 +1,225 @@
+
+
+.div1{
+    width: 200px;
+    height: 100px;
+    background-color: black;
+     position: absolute;
+    animation-name: change;
+    animation-duration: 3s;
+    border-radius: 24px;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change{
+        0%{
+       left : 0;
+       background-color: red;
+        }
+
+        25%{
+         background-color: aquamarine;
+        }
+
+        50%{
+            background-color: blueviolet;
+          
+        }
+
+        100%{
+        background-color: green;
+        left: 1100px;
+        }
+}
+
+
+.div2{
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+     position: absolute;
+    animation-name: change;
+    top: 200px;
+    animation-duration: 3s;
+    border-radius: 24px;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    left : 1100px;
+    animation-direction: reverse;
+}
+
+@keyframes change{
+        0%{
+       left : 0;
+       background-color: red;
+        }
+
+        25%{
+         background-color: aquamarine;
+        }
+
+        50%{
+            background-color: blueviolet;
+
+          
+        }
+
+        100%{
+        background-color: green;
+        left: 1100px
+        }
+
+    }
+
+
+    .div3{
+        width: 200px;
+        height: 100px;
+        background-color: black;
+         position: absolute;
+        animation-name: change;
+        top: 400px;
+        animation-duration: 3s;
+        animation-delay: 6s;
+        border-radius: 24px;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes change{
+            0%{
+           left : 0;
+           background-color: red;
+            }
+    
+            25%{
+             background-color: aquamarine;
+            }
+    
+            50%{
+              
+                background-color: blueviolet;
+              
+            }
+    
+            100%{
+            background-color: green;
+            left: 1100px;
+            }
+    }
+
+
+
+    .div4{
+        width: 200px;
+        height: 100px;
+        background-color: blue;
+         position: absolute;
+        animation-name: change;
+        animation-duration: 3s;
+        animation-delay: 9s;
+         animation-direction: reverse;
+        top: 600px;
+        left : 1100px;
+        border-radius: 24px;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes change{
+            0%{
+           left : 0
+            }
+    
+            25%{
+             background-color: aquamarine;
+            }
+    
+            50%{
+                background-color: red;
+              
+            }
+    
+            100%{
+            background-color: green;
+            left: 1100px;
+            }
+    }
+
+
+    .div5{
+        width: 200px;
+        height: 100px;
+        background-color: black;
+         position: absolute;
+        animation-name: change;
+        animation-delay: 12s;
+        top: 800px;
+        animation-duration: 3s;
+        border-radius: 24px;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes change{
+            0%{
+           left : 0
+            }
+    
+            25%{
+             background-color: aquamarine;
+            }
+    
+            50%{
+                background-color: red;
+              
+            }
+    
+            100%{
+            background-color: green;
+            left: 1100px;
+            }
+    }
+
+
+
+    .div6{
+        width: 200px;
+        height: 100px;
+        background-color: blue;
+         position: absolute;
+         top: 1000px;
+        animation-name: change;
+        animation-duration: 3s;
+        left : 1100px;
+        animation-delay: 15s;
+        animation-direction: reverse;
+        border-radius: 24px;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes change{
+            0%{
+           left : 0;
+           background-color: red;
+            }
+    
+            25%{
+             background-color: aquamarine;
+            }
+    
+            50%{
+              
+              background-color: blueviolet;
+            }
+    
+            100%{
+            background-color: green;
+            left: 1100px;
+            }
+    }
+        
+
+
+        
+
+        
+
+
