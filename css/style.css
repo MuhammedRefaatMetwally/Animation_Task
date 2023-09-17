@@ -1,225 +1,577 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.div1{
-    width: 200px;
-    height: 100px;
+
+body{
+    background-color:black ;
+  
+    height: 3000px;
+    perspective: 700px;
+    font-family: "pt-sans",sans-serif;
+
+    
+}
+
+.container1{
+    margin: auto;
+    width: 80%;
+}
+
+header{
+    padding: 40px 0px;
+}
+
+.contentHeader{
+    display: flex;
+    justify-content: space-between;
+    transform-style: preserve-3d;
+    align-items: center;
+}
+
+
+
+.header-list{
+    list-style: none;
+}
+
+.header-list i {
+    color: white;
+}
+
+.contentHeader ul li{
+    display: inline-block;
+    color: white;
+}
+
+.contentHeader ul li a, .header-content ul li a {
+    color: black;
+}
+
+.contentHeader nav ul li .device-link{
+    position: relative;
+    padding: 8px 24px;
+    display: block;
+    font-weight: bold;
+}
+
+
+.contentHeader nav ul li .device-link::before {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    transform: scale3d(0);
+    border-width: 0 2px;
+    width: 90%;
+    height: 90%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.contentHeader nav ul li .device-link::after {
+    transform: scale3d(0);
+    position: absolute;
+    content: "";
+    border-style: solid;
+    width: 90%;
+    height: 90%;
+    border-width: 2px 0;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.contentHeader nav ul li .device-link:hover::before{
+    transform: scale3d(1);
+    color: red;
+    transition: 0.6s;
+    opacity: 1;
+}
+
+.contentHeader nav ul li .device-link:hover::after{
+    transform: scale3d(1);
+    color: red;
+    transition: 2s;
+    opacity: 1;
+}
+
+
+.contentHeader nav  ul li a{
+
+    font-weight: bold;
+    color: red;
+     
+     padding: 12px 20px;
+     text-decoration: none;
+     font-size: 18px;
+}
+
+
+
+.contentHeader img{
+    flex: 1;
+    max-width: 150px;
+    border-radius: 75px;
+}
+
+.contentHeader nav{
+    flex: 3;
+    text-align: center;
+}
+
+.contentHeader .icons{
+    flex: 1;
+    text-align: right;
+}
+
+.contentHeader .icons ul li{
+    padding: 10px;
+    font-weight: bold;
+}
+
+.contentHeader .icons ul li:last-child i {
+    margin-right: 18px;
+    position: relative;
+}
+
+
+.contentHeader .icons ul li:last-child i::after {
+    position: absolute;
+    content: "0";
+    padding: 4px;
+    font-size: 8px;
+    border-radius: 50%;
+    bottom: -4px;
+    color: #fff;
+    background-color: red;
+
+}
+
+.dropdown-container{
+    position: relative;
+}
+
+.dropdown-menu {
+    width: 500px;
+    border: 2px solid red;
+    position: absolute;
+    margin-top: 8px;
     background-color: black;
-     position: absolute;
-    animation-name: change;
-    animation-duration: 3s;
-    border-radius: 24px;
-    animation-fill-mode: forwards;
+    visibility: hidden;
+    transform: scale(0);
+    z-index: 5;
+    padding: 8px;
+    transition:  0.5s;
+    opacity: 0;
+}
+
+.dropdown-menu ul {
+    display: table-cell;
+    text-align: left;
+}
+
+.dropdown-menu ul li {
+    line-height: 1.7;
+
+}
+
+
+
+.dropdown-container:hover .dropdown-menu{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transition: 1s;
+    
+}
+
+/********************************************************/
+
+.main-image-content img{
+   width: 100%;
+   
+}
+
+.main-image-content p{
+   
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    margin-top: -140;
+    margin-left: 372;
+    transform: skew(40deg);
+ }
+
+
+ .btn{
+    width: 10%;
+    height: 2%;
+    margin-top: -48px;
+    margin-left: 48px;
+    font-weight: bold;
+    border-radius:8px  ;
+   font-size: 20px;
+ }
+
+/*********************************************/
+
+.category{
+   text-align: center;
+   margin-top: 124px;
+}
+
+.special-category{
+    color: white; 
+    font-weight: bold;
+    margin: 24px 0px;
+    font-size: 32px;
+}
+
+.line{
+    background-color: red;
+    height: 3px;
+    width: 120px;
+    margin: auto;
+    transition: .8s;
+}
+.category:hover  .line{
+    transform: scaleX(1.5);
+    transition: 1s;
+}
+
+/****************************************************/
+.items-container{
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 56px;
+    
+}
+.item{
+    position: relative;
+}
+.item img{
+    width: 100%;
+    height: 60%;
+}
+
+.item .item-title{
+    color: white;
+    font-size: 18px;
+    margin-top: 16px;
+}
+
+.item .item-description{
+    color: lightskyblue;
+}
+
+.item i{
+    color: white;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 1.4;
+    font-size: 24;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.item:hover i{
+    visibility: visible;
+}
+/*********************************/
+
+.discount{
+    display: flex;
+    margin: 32px 0px;
+}
+
+.quote{
+    flex: 2;
+    padding: 24px;
+    position: relative;
+    background-color: lightskyblue;
+}
+.quote-icon{
+    color: red;
+    font-size: 56px;
+    position: absolute;
+    left:0;
+    top: 16;
+    margin-left: 16px;
+    
+}
+
+.quote-title{
+    display: inline;
+    color: white;
+    margin-left: 48px;
+
+}
+
+.quote-subtitle{
+    color: white;
+    font-size: 16px;
+    margin-left: 48px;
+}
+
+.quote-desc p {
+    margin: 32px;
+}
+.triple-lines{
+    text-align: right;
+}
+
+
+.triple-lines div {
+    height: 3px;
+    display: inline-block;
+    width: 80px;
+    background: red;
+}
+
+.discount-one{
+  
+    flex: 1;
+    position: relative;
+     height: 300px;
+    margin: 0px 32px;
+    
+    
+}
+.discount-two{
+    flex: 1;
+    position: relative;
+    
+   
+}
+.discount-one img{
+    
+    width: 100%;
+    background-size: cover;
+    height: 100%;
+}
+
+
+.discount-two img{
+    width: 100%;
+    background-size: cover;
+    height: 100%;
+}
+.discount-one p{
+    position: absolute;
+    color:crimson;
+    bottom: 40;
+    left: 24;
+    font-size: 18px;
+}
+
+.discount-one h3{
+    position: absolute;
+    color: white;
+    bottom: 10px;
+    left: 24;
+
+}
+
+
+.discount-two p{
+    position: absolute;
+    color:crimson;
+    bottom: 40;
+    left: 24;
+    font-size: 18px;
+}
+
+.discount-two h3{
+    position: absolute;
+    color: white;
+    bottom: 10px;
+    left: 24;
+
+}
+/**************************************************************/
+
+.features{
+    display: flex;
+    margin-top: 124px;
+}
+
+.item-feature{
+    flex: 1;
+    border-right:1px solid red ;
+    text-align: center;
+    margin-right: 8px;
+}
+
+.item-feature .icon{
+    position: relative;
+
+}
+
+.item-feature:last-child{
+    border: 0;
+}
+
+
+.item-feature .icon i{
+color:red;
+opacity: .3;
+font-size: 40px;
+top: -50;
+left: 90;
+transform:translateY(0px) ;
+display:flex ;
+position: absolute;
+
 }
 
 @keyframes change{
-        0%{
-       left : 0;
-       background-color: red;
-        }
+   0%{
+transform:translateY(0px) ;
+   }
+   50%{
+   transform: translateY(-100px);
+   opacity: 0;
+   }
 
-        25%{
-         background-color: aquamarine;
-        }
-
-        50%{
-            background-color: blueviolet;
-          
-        }
-
-        100%{
-        background-color: green;
-        left: 1100px;
-        }
+   100%{
+    transform:translateY(0px) ;
+    opacity: 1;
+   }
+   
 }
 
+.item-feature h3{
+    color: white;
+}
 
-.div2{
-    width: 200px;
-    height: 100px;
-    background-color: blue;
-     position: absolute;
+.item-feature p{
+color:red;
+opacity: .3;
+font-size: 20px ;
+}
+
+.item-feature:hover i{
     animation-name: change;
-    top: 200px;
-    animation-duration: 3s;
-    border-radius: 24px;
-    animation-delay: 3s;
+    animation-duration:1s ;
     animation-fill-mode: forwards;
-    left : 1100px;
-    animation-direction: reverse;
+    
+    animation-direction: alternate;
+    transform:translateY(0px) ;
 }
 
-@keyframes change{
-        0%{
-       left : 0;
-       background-color: red;
-        }
 
-        25%{
-         background-color: aquamarine;
-        }
+.lineFeature{
+    margin-top: 32px; 
+}
 
-        50%{
-            background-color: blueviolet;
-
-          
-        }
-
-        100%{
-        background-color: green;
-        left: 1100px
-        }
-
-    }
+.lineFeature hr{
+   background-color: red !important;   
+}
 
 
-    .div3{
-        width: 200px;
-        height: 100px;
-        background-color: black;
-         position: absolute;
-        animation-name: change;
-        top: 400px;
-        animation-duration: 3s;
-        animation-delay: 6s;
-        border-radius: 24px;
-        animation-fill-mode: forwards;
-    }
+/***********************************************************************/
+.featured-category{
+    margin-top: 82px;
+}
+/********************************************/
+
+.types{
+    margin:64px 0px ;
+    text-align: center;
+}
+
+.types span{
+color: lightskyblue;
+font-size: 24px;
+margin-right: 32px;
+}
+
+
+/***********************************/
+
+
+.products{
+    display: grid;
+    grid-gap: 124px;
+    margin-top: 32px 0px;
+    grid-template-columns:repeat(3,1fr);
+
+}
+.product-item , .frontImage ,.backImage{
+    width: 250px;
+    height: 250px;
+    transition: .6s;
+    background-size: cover;
+}
+.product-details .fa-star{
+color: red;
+margin-top: 8px;
+}
+
+.product-details p{
+    color: white;
+    font-size: 16px;
+}
+
+
+.product-details h4{
+    color: white;
+
+}
+.product-item{
+    position: relative;
+    transform-style: preserve-3d;
+    margin: auto;
+}
+
+.back-icons{
+    list-style: none;
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    bottom: 35%;
+    left: 20;
+    z-index: 1;
+    text-align: center;
     
-    @keyframes change{
-            0%{
-           left : 0;
-           background-color: red;
-            }
-    
-            25%{
-             background-color: aquamarine;
-            }
-    
-            50%{
-              
-                background-color: blueviolet;
-              
-            }
-    
-            100%{
-            background-color: green;
-            left: 1100px;
-            }
-    }
+}
+
+.back-icons li{
+    display: inline-block;
+    color: red;
+    width: 45px;
+    height: 40px;
+}
+
+.frontImage{
+    position: absolute;
+    z-index: 2;
+    backface-visibility: hidden;
+   
+}
+.backImage {
+
+    opacity: 0.9;
+    transform: rotateY(180deg);
+}
 
 
 
-    .div4{
-        width: 200px;
-        height: 100px;
-        background-color: blue;
-         position: absolute;
-        animation-name: change;
-        animation-duration: 3s;
-        animation-delay: 9s;
-         animation-direction: reverse;
-        top: 600px;
-        left : 1100px;
-        border-radius: 24px;
-        animation-fill-mode: forwards;
-    }
-    
-    @keyframes change{
-            0%{
-           left : 0
-            }
-    
-            25%{
-             background-color: aquamarine;
-            }
-    
-            50%{
-                background-color: red;
-              
-            }
-    
-            100%{
-            background-color: green;
-            left: 1100px;
-            }
-    }
-
-
-    .div5{
-        width: 200px;
-        height: 100px;
-        background-color: black;
-         position: absolute;
-        animation-name: change;
-        animation-delay: 12s;
-        top: 800px;
-        animation-duration: 3s;
-        border-radius: 24px;
-        animation-fill-mode: forwards;
-    }
-    
-    @keyframes change{
-            0%{
-           left : 0
-            }
-    
-            25%{
-             background-color: aquamarine;
-            }
-    
-            50%{
-                background-color: red;
-              
-            }
-    
-            100%{
-            background-color: green;
-            left: 1100px;
-            }
-    }
+.product-item:hover .frontImage{
+    transform: rotateY(180deg);
+}
 
 
 
-    .div6{
-        width: 200px;
-        height: 100px;
-        background-color: blue;
-         position: absolute;
-         top: 1000px;
-        animation-name: change;
-        animation-duration: 3s;
-        left : 1100px;
-        animation-delay: 15s;
-        animation-direction: reverse;
-        border-radius: 24px;
-        animation-fill-mode: forwards;
-    }
-    
-    @keyframes change{
-            0%{
-           left : 0;
-           background-color: red;
-            }
-    
-            25%{
-             background-color: aquamarine;
-            }
-    
-            50%{
-              
-              background-color: blueviolet;
-            }
-    
-            100%{
-            background-color: green;
-            left: 1100px;
-            }
-    }
-        
 
-
-        
-
-        
 
 
